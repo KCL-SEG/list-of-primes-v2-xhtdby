@@ -5,9 +5,9 @@ def primes(number_of_primes):
     if number_of_primes<0 or number_of_primes%1!=0:
         raise ValueError
     if number_of_primes>10:
-        reng=ceil(3*number_of_primes/log2(number_of_primes))
+        reng=ceil(number_of_primes*((log2(number_of_primes))**2))
     else:
-        reng=4*number_of_primes
+        reng=30
     list = []
     primes = []
     for i in range(2,reng):
