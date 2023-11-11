@@ -2,6 +2,8 @@
 """ENTER YOUR SOLUTION HERE!"""
 from math import log2
 def primes(number_of_primes):
+    if number_of_primes<0 or number_of_primes%1!=0:
+        raise ValueError
     reng=2*number_of_primes/log2(number_of_primes)
     list = []
     primes = []
@@ -14,7 +16,7 @@ def primes(number_of_primes):
             for x in list.copy():
                 if x%i==0:
                     list.remove(x)
-    return primes[0:number_of_primes]
-
-def __init__():
-    print(primes(100))
+    try:
+        return primes[0:number_of_primes-1]
+    except:
+        return []
