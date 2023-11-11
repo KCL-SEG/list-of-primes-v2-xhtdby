@@ -19,6 +19,6 @@ def primes(number_of_primes):
                 if x%i==0:
                     list.remove(x)
     try:
-        return primes[0:number_of_primes-1]
+        return primes[0:number_of_primes]
     except:
         return []
