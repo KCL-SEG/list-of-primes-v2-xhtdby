@@ -1,15 +1,14 @@
 """List of prime numbers generator."""
 """ENTER YOUR SOLUTION HERE!"""
-from math import log2
+from math import log2,ceil
 def primes(number_of_primes):
     if number_of_primes<0 or number_of_primes%1!=0:
         raise ValueError
-    reng=2*number_of_primes/log2(number_of_primes)
+    reng=ceil(2*number_of_primes/log2(number_of_primes))
     list = []
     primes = []
     for i in (2,reng):
         list.append(i)
-    primes.append(2)
     for i in (2,reng):
         if i in list:
             primes.append(i)
