@@ -10,9 +10,9 @@ def primes(number_of_primes):
         reng=4*number_of_primes
     list = []
     primes = []
-    for i in (2,reng):
+    for i in range(2,reng):
         list.append(i)
-    for i in (2,reng):
+    for i in range(2,reng):
         if i in list:
             primes.append(i)
             for x in list.copy():
