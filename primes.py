@@ -4,9 +4,9 @@ from math import log2,ceil
 def primes(number_of_primes):
     if number_of_primes<0 or number_of_primes%1!=0:
         raise ValueError
-    try:
-        reng=ceil(2*number_of_primes/log2(number_of_primes))
-    except:
+    if number_of_primes>10:
+        reng=ceil(3*number_of_primes/log2(number_of_primes))
+    else:
         reng=4*number_of_primes
     list = []
     primes = []
